@@ -14,14 +14,14 @@ export default function AboutIndex() {
       
       <div className="space-y-8 text-lg font-sans text-ieee-deep/80 leading-relaxed">
         <p>
-          The IEEE Student Branch is a hub of technological innovation and professional development. We provide a platform for forward-thinking individuals to collaborate, learn, and create impact.
+          The IEEE Student Branch at SRM University AP is a hub of technological innovation and professional development. We provide a platform for forward-thinking individuals to collaborate, learn, and create impact within the Amaravati campus and beyond.
         </p>
         
         <div className="h-px w-full bg-ieee-deep/10 my-12" />
 
         <h3 className="text-3xl font-display font-medium text-ieee-deep mb-4">Our Vision</h3>
         <p>
-          To be the premier student-led organization that pioneers technological research, hardware engineering, and software solutions, fostering a culture where bold ideas are transformed into reality.
+          To be the premier student-led organization at SRM AP that pioneers technological research, hardware engineering, and software solutions, fostering a culture where bold ideas are transformed into reality.
         </p>
       </div>
     </motion.div>

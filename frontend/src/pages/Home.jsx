@@ -40,36 +40,39 @@ export default function Home() {
            <div className="absolute bottom-1/4 left-1/4 w-[30rem] h-[30rem] bg-ieee-cyan/20 rounded-full blur-[100px]" />
         </div>
 
-        <div className="relative z-10 max-w-5xl">
-          <div className="overflow-hidden mb-4">
+        <div className="relative z-10 w-full flex flex-col items-center justify-center text-center mt-auto pb-12">
+          <div className="overflow-hidden mb-6">
              <motion.h1 
                initial={{ y: '100%' }}
                animate={{ y: 0 }}
                transition={{ duration: 1, delay: 0.2, ease: [0.76, 0, 0.24, 1] }}
-               className="text-6xl md:text-[8rem] leading-[0.9] font-display font-medium tracking-tighter"
+               className="text-7xl md:text-[10rem] leading-[0.9] font-display font-medium tracking-tighter"
              >
                Engineered <br/> For <span className="text-ieee-cyan italic">Impact.</span>
              </motion.h1>
           </div>
           
-          <div className="overflow-hidden max-w-xl mt-8">
+          <div className="overflow-hidden max-w-3xl mt-8">
             <motion.p
               initial={{ y: '100%', opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 0.4, ease: [0.76, 0, 0.24, 1] }}
-              className="text-lg md:text-xl text-ieee-light/80 font-sans"
+              className="text-xl md:text-2xl text-ieee-light/80 font-sans leading-relaxed"
             >
-              We are the IEEE Student Branch. Advancing technology for humanity through bold innovation, rigorous engineering, and visionary leadership.
+              We are the IEEE Student Branch at SRM University AP. Advancing technology for humanity through bold innovation, rigorous engineering, and visionary leadership.
             </motion.p>
           </div>
         </div>
       </section>
 
       {/* spacer to scroll down */}
-      <section className="h-screen flex items-center justify-center relative z-10 bg-ieee-light text-ieee-deep rounded-t-[3rem] px-8 py-20 mt-[-2rem]">
-         <h2 className="text-4xl md:text-6xl font-display font-bold max-w-4xl text-center">
-            Pushing the boundaries of what's possible, one breakthrough at a time.
-         </h2>
+      <section className="h-screen flex items-center justify-center relative z-10 bg-ieee-light text-ieee-deep rounded-t-[3rem] px-8 py-20 mt-[-2rem] shadow-[0_-20px_40px_rgba(0,0,0,0.1)]">
+         <div className="max-w-4xl text-center">
+            <span className="text-ieee-bright font-sans uppercase tracking-[0.2em] font-bold text-sm mb-6 block">Our Mission</span>
+            <h2 className="text-4xl md:text-6xl font-display font-medium leading-tight">
+               Empowering the engineers of <span className="font-bold text-ieee-bright">SRM University AP</span> to push the boundaries of what's possible.
+            </h2>
+         </div>
       </section>
     </motion.div>
   );

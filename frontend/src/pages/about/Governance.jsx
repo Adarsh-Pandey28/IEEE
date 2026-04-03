@@ -19,7 +19,7 @@ export default function Governance() {
       </h1>
       
       <p className="text-lg font-sans text-ieee-deep/80 leading-relaxed mb-16">
-        Transparency, structured growth, and accountability form the pillars of our branch. Our governance ensures we remain steadfast to the IEEE bylaws while adapting to modern organizational needs.
+        Transparency, structured growth, and accountability form the pillars of our branch. Our governance ensures we remain steadfast to the IEEE bylaws while adapting to the modern organizational needs of SRM University AP.
       </p>
 
       <div className="grid gap-12 border-l border-ieee-deep/10 pl-8 md:pl-12">

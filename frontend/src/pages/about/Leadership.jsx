@@ -2,10 +2,10 @@ import { motion } from 'framer-motion';
 
 export default function Leadership() {
   const leaders = [
-    { name: "Satoshi Tanaka", role: "Chairperson", discipline: "Computer Science" },
-    { name: "Elena Rostova", role: "Vice Chair", discipline: "Electrical Engineering" },
-    { name: "Marcus Chen", role: "Technical Lead", discipline: "Robotics" },
-    { name: "Aisha Patel", role: "Operations Head", discipline: "Information Technology" },
+    { name: "Siddharth Reddy", role: "Chairperson", discipline: "Computer Science" },
+    { name: "Ananya Sharma", role: "Vice Chair", discipline: "Electrical & Electronics Engineering" },
+    { name: "Karthik Nair", role: "Treasurer", discipline: "Mechanical Engineering" },
+    { name: "Priya Singh", role: "Webmaster", discipline: "Computer Science" },
   ];
 
   return (

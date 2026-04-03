@@ -8,14 +8,10 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'Intro', path: '/intro' },
     { name: 'About', path: '/about' },
     { name: 'Board', path: '/executive-board' },
     { name: 'Chapters', path: '/chapters' },
     { name: 'Events', path: '/events' },
-    { name: 'Achievements', path: '/achievements' },
-    { name: 'Join', path: 'https://www.ieee.org/', isExternal: true },
   ];
 
   return (
@@ -26,51 +22,57 @@ export default function Navbar() {
         transition={{ duration: 0.8, delay: 0.5, ease: [0.76, 0, 0.24, 1] }}
         className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-8 py-6 mix-blend-difference text-ieee-light"
       >
-        <div className="font-display font-bold text-xl tracking-wider relative z-50">
-          <Link to="/" onClick={() => setIsMobileMenuOpen(false)}>IEEE SRM</Link>
+        <div className="relative z-50 flex items-center gap-4">
+          <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center gap-4 group">
+             <img 
+               src="/ieee-logo.svg" 
+               alt="IEEE Logo" 
+               className="h-6 md:h-8 w-auto filter brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity" 
+             />
+             <span className="h-5 w-[1px] bg-white/40 hidden md:block" />
+             <span className="font-display font-medium text-lg md:text-xl tracking-[0.15em] hidden md:block opacity-90 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+               SRM AP
+             </span>
+          </Link>
         </div>
         
         {/* Desktop Menu */}
-        <div className="hidden lg:flex gap-8 text-sm font-sans uppercase tracking-[0.1em]">
-          {navLinks.map((link) => {
-            const isExternal = link.isExternal;
-            const content = (
-              <>
-                <span className="relative z-10">{link.name}</span>
-                {!isExternal && location.pathname === link.path && (
-                  <motion.div 
-                    layoutId="nav-indicator"
-                    className="absolute bottom-0 left-0 right-0 h-[1px] bg-ieee-cyan"
-                  />
-                )}
-                <span className="absolute bottom-0 left-0 w-full h-[1px] bg-ieee-cyan transform scale-x-0 origin-right transition-transform group-hover:scale-x-100 group-hover:origin-left" />
-              </>
-            );
+        <div className="hidden lg:flex items-center gap-8 xl:gap-12 text-[11px] xl:text-sm font-sans uppercase tracking-[0.15em]">
+          <div className="flex gap-6 xl:gap-8 items-center">
+            {navLinks.map((link) => {
+              const content = (
+                <>
+                  <span className="relative z-10">{link.name}</span>
+                  {location.pathname === link.path && (
+                    <motion.div 
+                      layoutId="nav-indicator"
+                      className="absolute bottom-0 left-0 right-0 h-[1px] bg-ieee-cyan"
+                    />
+                  )}
+                  <span className="absolute bottom-0 left-0 w-full h-[1px] bg-ieee-cyan transform scale-x-0 origin-right transition-transform group-hover:scale-x-100 group-hover:origin-left" />
+                </>
+              );
 
-            if (isExternal) {
               return (
-                <a 
+                <Link 
                   key={link.path} 
-                  href={link.path}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="relative group overflow-hidden"
+                  to={link.path}
+                  className="relative group overflow-hidden py-1"
                 >
                   {content}
-                </a>
+                </Link>
               );
-            }
-
-            return (
-              <Link 
-                key={link.path} 
-                to={link.path}
-                className="relative group overflow-hidden"
-              >
-                {content}
-              </Link>
-            );
-          })}
+            })}
+          </div>
+          
+          <a 
+            href="https://www.ieee.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border border-white/40 px-6 py-2 rounded-full hover:bg-white hover:text-ieee-deep transition-all duration-300 font-bold tracking-[0.2em]"
+          >
+            JOIN
+          </a>
         </div>
 
         {/* Mobile Toggle Button */}

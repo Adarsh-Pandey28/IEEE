@@ -23,15 +23,15 @@ export default function ExecutiveBoard() {
   }, { scope: container });
 
   const executivesGroup1 = [
-    { name: "Satoshi Tanaka", role: "Chairperson", year: "Senior", bg: "bg-ieee-deep text-ieee-light" },
-    { name: "Elena Rostova", role: "Vice Chair", year: "Senior", bg: "bg-ieee-light text-ieee-deep" },
-    { name: "Aisha Patel", role: "Secretary", year: "Junior", bg: "bg-ieee-cyan text-ieee-deep" },
+    { name: "Siddharth Reddy", role: "Chairperson", year: "Final Year", bg: "bg-ieee-deep text-ieee-light" },
+    { name: "Ananya Sharma", role: "Vice Chair", year: "Final Year", bg: "bg-ieee-light text-ieee-deep" },
+    { name: "Rahul Verma", role: "Secretary", year: "Third Year", bg: "bg-ieee-cyan text-ieee-deep" },
   ];
 
   const executivesGroup2 = [
-    { name: "David Kim", role: "Treasurer", year: "Senior", bg: "bg-ieee-bright text-white" },
-    { name: "Priya Singh", role: "Webmaster", year: "Sophomore", bg: "bg-ieee-deep text-ieee-light" },
-    { name: "James Carter", role: "Event Coordinator", year: "Junior", bg: "bg-ieee-light text-ieee-deep" },
+    { name: "Karthik Nair", role: "Treasurer", year: "Final Year", bg: "bg-ieee-bright text-white" },
+    { name: "Priya Singh", role: "Webmaster", year: "Second Year", bg: "bg-ieee-deep text-ieee-light" },
+    { name: "Aditya Desai", role: "Event Coordinator", year: "Third Year", bg: "bg-ieee-light text-ieee-deep" },
   ];
 
   return (

@@ -26,26 +26,26 @@ export default function Events() {
     { 
       bg: "bg-ieee-light text-ieee-deep",
       date: "Oct 24", 
-      title: "The Future of Quantum Computing", 
-      speaker: "Dr. Alistair Webb", 
-      role: "Lead Researcher, IBM Quantum",
-      tags: ["Computer Society", "Keynote"] 
+      title: "AI & Machine Learning for Healthcare", 
+      speaker: "Distinguished Lecture Series", 
+      role: "In collaboration with CS Department",
+      tags: ["Computer Society", "Workshop"] 
     },
     { 
       bg: "bg-ieee-bright text-white",
       date: "Nov 12", 
-      title: "Autonomous Systems Workshop", 
-      speaker: "Sarah O'Connor", 
-      role: "Robotics Engineer, Tesla",
-      tags: ["Robotics & Automation", "Workshop"] 
+      title: "5G & Telecommunications Future", 
+      speaker: "Dr. Venkat Rao", 
+      role: "IEEE Guntur Subsection",
+      tags: ["Communications", "Seminar"] 
     },
     { 
       bg: "bg-ieee-deep text-ieee-cyan",
       date: "Dec 05", 
-      title: "Smart Grids for 2030", 
-      speaker: "Prof. Li Wei", 
-      role: "Dept. of Energy Strategy",
-      tags: ["Power & Energy", "Seminar"] 
+      title: "Annual ECE Ideathon 2026", 
+      speaker: "SRM AP Campus", 
+      role: "Project Funding Opportunity",
+      tags: ["Innovation", "Hackathon"] 
     },
   ];
 

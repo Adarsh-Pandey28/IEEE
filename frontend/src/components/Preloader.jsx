@@ -1,56 +1,87 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
+import gsap from 'gsap';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Preloader() {
   const [isLoading, setIsLoading] = useState(true);
-  const [progress, setProgress] = useState(0);
-
+  const numberRef = useRef(null);
+  
   useEffect(() => {
-    const timer = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 100) {
-          clearInterval(timer);
-          setTimeout(() => setIsLoading(false), 500); // Wait a half-second at 100%
-          return 100;
-        }
-        return prev + 2; // Speed of the loader
-      });
-    }, 20);
+    // Elegant count-up
+    gsap.to(numberRef.current, {
+      innerHTML: 100,
+      duration: 2.2,
+      snap: { innerHTML: 1 },
+      ease: "power1.inOut",
+    });
 
-    return () => clearInterval(timer);
+    const timer = setTimeout(() => {
+       setIsLoading(false);
+    }, 2600);
+
+    return () => clearTimeout(timer);
   }, []);
 
   return (
     <AnimatePresence>
       {isLoading && (
-        <motion.div
-           initial={{ y: 0 }}
-           exit={{ y: '-100%', transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] } }}
-           className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-ieee-deep text-ieee-light overflow-hidden"
+        <motion.div 
+          initial={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="fixed inset-0 z-[200] flex flex-col items-center justify-center bg-ieee-deep pointer-events-none"
         >
-          {/* Background noise/texture can optionally go here */}
-          
-          <div className="relative z-10 text-center">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="text-sm tracking-[0.2em] uppercase font-sans text-ieee-cyan mb-8"
-            >
-              System Initialization
-            </motion.div>
+           {/* The Core Container */}
+           <div className="relative w-full max-w-sm px-8 overflow-hidden flex flex-col items-center">
+              
+              {/* Top Logo */}
+              <div className="overflow-hidden mb-8">
+                 <motion.div 
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                 >
+                    <img 
+                       src="/ieee-logo.svg" 
+                       alt="IEEE Logo" 
+                       className="h-10 md:h-14 w-auto filter brightness-0 invert opacity-90 mx-auto" 
+                    />
+                 </motion.div>
+              </div>
 
-            <div className="text-8xl md:text-[12rem] font-display font-bold leading-none tracking-tighter">
-              {progress}<span className="text-ieee-cyan text-4xl md:text-6xl align-top">%</span>
-            </div>
-            
-            <div className="mt-8 h-px w-64 md:w-96 bg-white/20 mx-auto relative overflow-hidden">
-               <motion.div 
-                 className="absolute inset-y-0 left-0 bg-ieee-cyan"
-                 style={{ width: `${progress}%` }}
-               />
-            </div>
-          </div>
+              {/* Center Precision Line */}
+              <div className="w-full h-px bg-white/20 relative overflow-hidden mb-4">
+                 <motion.div 
+                    initial={{ scaleX: 0, originX: 0 }}
+                    animate={{ scaleX: 1 }}
+                    exit={{ scaleX: 0, originX: 1 }} // Snaps beautifully out to the right on exit
+                    transition={{ duration: 2.2, ease: "easeInOut" }}
+                    className="absolute inset-0 bg-ieee-cyan"
+                 />
+              </div>
+
+              {/* Bottom Counter */}
+              <div className="flex w-full justify-between items-center px-1 overflow-hidden">
+                 <motion.span 
+                    initial={{ y: -20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    className="text-white/50 text-[10px] font-sans uppercase tracking-widest"
+                 >
+                    Loading Environment
+                 </motion.span>
+
+                 <motion.div 
+                    initial={{ y: -20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    className="text-white/80 text-[10px] font-mono tracking-wider flex items-center"
+                 >
+                    <span ref={numberRef}>0</span>%
+                 </motion.div>
+              </div>
+              
+           </div>
         </motion.div>
       )}
     </AnimatePresence>

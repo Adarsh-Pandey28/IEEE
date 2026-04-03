@@ -5,9 +5,13 @@ export default function Footer() {
     <footer className="bg-ieee-deep text-ieee-light pt-24 pb-12 px-8 md:px-16 border-t border-ieee-light/10 mt-auto z-10 relative">
        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-16">
           <div className="max-w-md">
-             <h2 className="text-3xl font-display font-medium tracking-wide mb-6">
-                IEEE Student Branch
-             </h2>
+             <div className="flex items-center gap-4 mb-6">
+                <img src="/ieee-logo.svg" alt="IEEE Logo" className="h-6 md:h-8 w-auto filter brightness-0 invert opacity-90" />
+                <span className="h-5 w-[1px] bg-white/40" />
+                <h2 className="text-xl md:text-2xl font-display font-medium tracking-[0.15em] whitespace-nowrap">
+                   SRM AP
+                </h2>
+             </div>
              <p className="text-ieee-light/60 font-sans leading-relaxed">
                 Empowering the innovators of tomorrow. Join our community to access exclusive resources, workshops, and global networking opportunities.
              </p>
@@ -22,10 +26,11 @@ export default function Footer() {
                 <Link to="/achievements" className="text-ieee-light/70 hover:text-white transition-colors">Achievements</Link>
              </div>
              <div className="flex flex-col gap-4">
-                <span className="text-ieee-cyan font-bold tracking-widest uppercase text-sm mb-2">Engage</span>
-                <Link to="/events" className="text-ieee-light/70 hover:text-white transition-colors">Events & Speakers</Link>
+                <span className="text-ieee-cyan font-bold tracking-widest uppercase text-sm mb-2">Connect</span>
+                <Link to="/events" className="text-ieee-light/70 hover:text-white transition-colors">Seminars & Speakers</Link>
                 <a href="https://www.ieee.org/" target="_blank" rel="noopener noreferrer" className="text-ieee-light/70 hover:text-white transition-colors">Become a Member</a>
              </div>
+
           </div>
        </div>
 

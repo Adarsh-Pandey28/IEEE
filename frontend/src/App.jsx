@@ -20,12 +20,20 @@ import Events from './pages/Events';
 import Join from './pages/Join';
 import NotFound from './pages/NotFound';
 
+import BlogList from './pages/BlogList';
+import BlogDetail from './pages/BlogDetail';
+import Gallery from './pages/Gallery';
+import Contact from './pages/Contact';
+
+import ScrollToTop from './components/ScrollToTop';
+
 function App() {
   const location = useLocation();
 
   return (
     <SmoothScroll>
       <div className="flex flex-col min-h-screen">
+        <ScrollToTop />
         <Preloader />
         <Navbar />
         
@@ -47,6 +55,14 @@ function App() {
               <Route path="/achievements" element={<Achievements />} />
               <Route path="/events" element={<Events />} />
               <Route path="/join" element={<Join />} />
+              
+              {/* Temporary removal for Phase 1 
+              <Route path="/blog" element={<BlogList />} />
+              <Route path="/blog/:id" element={<BlogDetail />} />
+              <Route path="/gallery" element={<Gallery />} />
+              <Route path="/contact" element={<Contact />} />
+              */}
+              
               <Route path="*" element={<NotFound />} />
             </Routes>
           </AnimatePresence>
