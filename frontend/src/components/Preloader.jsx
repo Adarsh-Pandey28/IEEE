@@ -34,7 +34,7 @@ export default function Preloader() {
            {/* The Core Container */}
            <div className="relative w-full max-w-sm px-8 overflow-hidden flex flex-col items-center">
               
-              {/* Top Logo */}
+              {/* Top Logo Badge */}
               <div className="overflow-hidden mb-8">
                  <motion.div 
                     initial={{ y: 20, opacity: 0 }}
@@ -42,9 +42,9 @@ export default function Preloader() {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                  >
                     <img 
-                       src="/ieee-logo.svg" 
-                       alt="IEEE Logo" 
-                       className="h-10 md:h-14 w-auto filter brightness-0 invert opacity-90 mx-auto" 
+                       src="/ieee-horizontal-logo.png" 
+                       alt="IEEE SRM AP Logo" 
+                       className="h-10 md:h-14 w-auto object-contain mx-auto" 
                     />
                  </motion.div>
               </div>

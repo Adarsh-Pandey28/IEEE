@@ -23,15 +23,15 @@ export default function ExecutiveBoard() {
   }, { scope: container });
 
   const executivesGroup1 = [
-    { name: "Siddharth Reddy", role: "Chairperson", year: "Final Year", bg: "bg-ieee-deep text-ieee-light" },
+    { name: "Siddharth Reddy", role: "Chairperson", year: "Final Year", bg: "bg-ieee-bright text-white" },
     { name: "Ananya Sharma", role: "Vice Chair", year: "Final Year", bg: "bg-ieee-light text-ieee-deep" },
-    { name: "Rahul Verma", role: "Secretary", year: "Third Year", bg: "bg-ieee-cyan text-ieee-deep" },
+    { name: "Rahul Verma", role: "Secretary", year: "Third Year", bg: "bg-ieee-cyan text-ieee-deep shadow-2xl" },
   ];
 
   const executivesGroup2 = [
-    { name: "Karthik Nair", role: "Treasurer", year: "Final Year", bg: "bg-ieee-bright text-white" },
+    { name: "Karthik Nair", role: "Treasurer", year: "Final Year", bg: "bg-ieee-light text-ieee-deep" },
     { name: "Priya Singh", role: "Webmaster", year: "Second Year", bg: "bg-ieee-deep text-ieee-light" },
-    { name: "Aditya Desai", role: "Event Coordinator", year: "Third Year", bg: "bg-ieee-light text-ieee-deep" },
+    { name: "Aditya Desai", role: "Event Coordinator", year: "Third Year", bg: "bg-ieee-bright text-white shadow-2xl" },
   ];
 
   return (

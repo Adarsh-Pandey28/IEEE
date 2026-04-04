@@ -55,13 +55,11 @@ function App() {
               <Route path="/achievements" element={<Achievements />} />
               <Route path="/join" element={<Join />} />
               
-              {/* Temporary removal for Phase 1 
               <Route path="/events" element={<Events />} />
               <Route path="/blog" element={<BlogList />} />
               <Route path="/blog/:id" element={<BlogDetail />} />
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/contact" element={<Contact />} />
-              */}
               
               <Route path="*" element={<NotFound />} />
             </Routes>

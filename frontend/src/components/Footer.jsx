@@ -5,12 +5,12 @@ export default function Footer() {
     <footer className="bg-ieee-deep text-ieee-light pt-24 pb-12 px-8 md:px-16 border-t border-ieee-light/10 mt-auto z-10 relative">
        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-16">
           <div className="max-w-md">
-             <div className="flex items-center gap-4 mb-6">
-                <img src="/ieee-logo.svg" alt="IEEE Logo" className="h-6 md:h-8 w-auto filter brightness-0 invert opacity-90" />
-                <span className="h-5 w-[1px] bg-white/40" />
-                <h2 className="text-xl md:text-2xl font-display font-medium tracking-[0.15em] whitespace-nowrap">
-                   SRM AP
-                </h2>
+             <div className="flex items-center gap-4 mb-6 transition-transform duration-300 hover:scale-105">
+                <img 
+                  src="/ieee-main-logo.png" 
+                  alt="IEEE SRM AP Logo" 
+                  className="h-16 md:h-20 w-auto object-contain" 
+                />
              </div>
              <p className="text-ieee-light/60 font-sans leading-relaxed">
                 Empowering the innovators of tomorrow. Join our community to access exclusive resources, workshops, and global networking opportunities.
@@ -24,9 +24,13 @@ export default function Footer() {
                 <Link to="/executive-board" className="text-ieee-light/70 hover:text-white transition-colors">Executive Board</Link>
                 <Link to="/chapters" className="text-ieee-light/70 hover:text-white transition-colors">Chapters</Link>
                 <Link to="/achievements" className="text-ieee-light/70 hover:text-white transition-colors">Achievements</Link>
+                <Link to="/events" className="text-ieee-light/70 hover:text-white transition-colors">Events & Workshops</Link>
              </div>
              <div className="flex flex-col gap-4">
-                <span className="text-ieee-cyan font-bold tracking-widest uppercase text-sm mb-2">Connect</span>
+                <span className="text-ieee-cyan font-bold tracking-widest uppercase text-sm mb-2">Community</span>
+                <Link to="/gallery" className="text-ieee-light/70 hover:text-white transition-colors">Gallery</Link>
+                <Link to="/blog" className="text-ieee-light/70 hover:text-white transition-colors">Blog</Link>
+                <Link to="/contact" className="text-ieee-light/70 hover:text-white transition-colors">Contact Us</Link>
                 <a href="https://www.ieee.org/" target="_blank" rel="noopener noreferrer" className="text-ieee-light/70 hover:text-white transition-colors">Become a Member</a>
              </div>
 

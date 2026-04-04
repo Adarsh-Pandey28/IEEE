@@ -11,7 +11,8 @@ export default {
            deep: '#0A1F44',
            bright: '#0A66C2',
            cyan: '#00C2FF',
-           light: '#F5F7FA'
+           light: '#FDFCF0', // Warm off-white/beige
+           beige: '#F5F5DC'  // Standard beige
         }
       },
       fontFamily: {

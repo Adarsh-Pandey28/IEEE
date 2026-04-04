@@ -23,9 +23,10 @@ export default function Chapters() {
   }, { scope: container });
 
   const chapters = [
-     { id: 'cs', title: 'Computer Society', desc: 'Focusing on artificial intelligence, software engineering, and the future of computing.', bg: 'bg-ieee-deep text-ieee-light' },
-     { id: 'ras', title: 'Robotics & Automation', desc: 'Bridging the gap between software and physical machines.', bg: 'bg-ieee-bright text-white' },
-     { id: 'pes', title: 'Power & Energy', desc: 'Innovating sustainable energy solutions and smart grids.', bg: 'bg-ieee-light text-ieee-deep' },
+     { id: 'cs', title: 'Computer Society', desc: 'Focusing on artificial intelligence, software engineering, and the future of computing.', bg: 'bg-ieee-bright text-white' },
+     { id: 'ras', title: 'Robotics & Automation', desc: 'Bridging the gap between software and physical machines.', bg: 'bg-ieee-light text-ieee-deep' },
+     { id: 'pes', title: 'Power & Energy', desc: 'Innovating sustainable energy solutions and smart grids.', bg: 'bg-ieee-deep text-white shadow-2xl' },
+     { id: 'comsoc', title: 'Communications Society', desc: 'Advancing the world through information and networking technologies.', bg: 'bg-ieee-bright text-white shadow-2xl' },
   ];
 
   return (
